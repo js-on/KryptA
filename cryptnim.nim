@@ -1,4 +1,4 @@
-from os import commandLineParams
+import os
 from algorithm import sort
 from math import `^`, isPowerOfTwo, round, log2
 from random import shuffle, randomize
@@ -6,7 +6,6 @@ import parseopt
 import strutils
 from times import now, `-`
 import tables
-
 
 var BIT_SIZE: int
 var BOILERPLATE: seq[string]
@@ -77,10 +76,12 @@ proc analyzeBox(s: seq[string], debug: bool = false): Rating {.discardable.} =
             if debug:
                 var highlight = ""
                 if res == 16:
-                    highlight = "\e[1;31m"
+                    when defined(posix):
+                        highlight = "\e[1;31m"
                 elif res <= 16-THRESHOLD or res >= 16 + THRESHOLD:
                     inc variance
-                    highlight = "\e[1;32m"
+                    when defined(posix):
+                        highlight = "\e[1;32m"
                     # if not domApprox.hasKey(res):
                     #     domApprox[res] = 1
                     # else:
