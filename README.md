@@ -15,6 +15,14 @@ Generate *x* s-boxes of size *y* (bitsize) in *z* rounds with the `--loop|-l` pa
 Test s-boxes from CSV file `sbox.csv` (in the same directory) and show proximity tables with the `--test|-t` parameter:<br>
 `./cryptnim -t`
 
+#### Encryption
+> Will use both sboxes from `sbox.csv`
+`python3 encrypt.py` and enter 10bit binary number
+
+#### Decryption
+> Will use both sboxes from `sbox.csv`
+`python3 decrypt.py` and enter 10bit binary output from encryption
+
 ### Files
 - `cryptpy.py`: Working but slow! Usage same as above (only long parameters!)
 - `cryptcpp.cpp`: Faster but not working as it should... Find the bug and you'll get a cookie! Same usage as above.
