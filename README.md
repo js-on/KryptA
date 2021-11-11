@@ -16,11 +16,11 @@ Test s-boxes from CSV file `sbox.csv` (in the same directory) and show proximity
 `./cryptnim -t`
 
 #### Encryption
-> Will use both sboxes from `sbox.csv`
+> Will use both sboxes from `sbox.csv`<br>
 `python3 encrypt.py` and enter 10bit binary number
 
 #### Decryption
-> Will use both sboxes from `sbox.csv`
+> Will use both sboxes from `sbox.csv`<br>
 `python3 decrypt.py` and enter 10bit binary output from encryption
 
 ### Files
